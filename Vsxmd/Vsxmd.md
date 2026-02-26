@@ -1560,12 +1560,20 @@ Program entry.
 Usage syntax:
 
 ```
-Vsxmd.exe &lt;input-XML-path&gt; [output-Markdown-path] [should-delete-xml] [assembly-path] [should-skip-internal] [should-skip-non-browsable]
+Vsxmd.exe <input-XML-path> [output-Markdown-path] [should-delete-xml] [assembly-path] [should-skip-internal] [should-skip-non-browsable]
 ```
 
 The `input-XML-path` argument is required. It references to the VS generated XML documentation file.
 
 The `output-Markdown-path` argument is optional. It indicates the file path for the Markdown output file. When not specific, it will be a `.md` file with same file name as the XML documentation file, path at the XML documentation folder.
+
+The `should-delete-xml` argument is optional. Pass "true" to delete the original XML file after generating the markdown.
+
+The `assembly-path` argument is optional. It indicates the file path for the assembly corresponding to the XML file. This is needed to support the skip arguments.
+
+The `should-skip-internal` argument is optional. Pass "true" to exclude internal types and members from the markdown. Requires the assembly-path argument.
+
+The `should-skip-non-browsable` argument is optional. Pass "true" to exclude types and members marked with the [EditorBrowsableAttribute](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ComponentModel.EditorBrowsableAttribute 'System.ComponentModel.EditorBrowsableAttribute') with a value of [Never](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ComponentModel.EditorBrowsableState.Never 'System.ComponentModel.EditorBrowsableState.Never'). Requires the assembly-path argument.
 
 <a name='M-Vsxmd-Program-Main-System-String[]-'></a>
 ### Main(args) `method`

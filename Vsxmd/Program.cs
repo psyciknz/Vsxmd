@@ -40,6 +40,19 @@ namespace Vsxmd
             {
                 if (args == null || args.Length < 1)
                 {
+                    Console.WriteLine("VSXMD XML to Markdown converter");
+                    Console.WriteLine("Usage:");
+                    Console.WriteLine("  Vsxmd <xmlPath> [markdownPath] [deleteXml] [assemblyPath] [skipInternal] [skipNonBrowsable]");
+                    Console.WriteLine();
+                    Console.WriteLine("Arguments:");
+                    Console.WriteLine("  xmlPath         Path to the input XML documentation file.");
+                    Console.WriteLine("  markdownPath    Optional path for the output Markdown file.");
+                    Console.WriteLine("                  If omitted, the .xml extension of xmlPath is replaced with .md.");
+                    Console.WriteLine("  deleteXml       Optional boolean (true/false). If true, deletes the XML file after conversion.");
+                    Console.WriteLine("  assemblyPath    Optional path to the assembly (.dll/.exe) used to resolve members.");
+                    Console.WriteLine("                  Required if skipInternal or skipNonBrowsable is true.");
+                    Console.WriteLine("  skipInternal    Optional boolean (true/false). If true, skips internal members.");
+                    Console.WriteLine("  skipNonBrowsable Optional boolean (true/false). If true, skips members without Browsable(true).");
                     return;
                 }
 

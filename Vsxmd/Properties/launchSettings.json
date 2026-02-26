@@ -1,8 +1,17 @@
 {
   "profiles": {
-    "Vsxmd": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "Vsxmd-Skip-Internal": {
       "commandName": "Project",
-      "commandLineArgs": "Vsxmd.xml",
+      "commandLineArgs": "C:\\Users\\d_col\\Documents\\Code\\Git\\Vsxmd\\Vsxmd\\bin\\Debug\\net8.0\\Vsxmd.xml \"\" \"\" C:\\Users\\d_col\\Documents\\Code\\Git\\Vsxmd\\Vsxmd\\bin\\Debug\\net8.0\\Vsxmd.dll true true",
+      "workingDirectory": "."
+    },
+    "VSxmd": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\d_col\\Documents\\Code\\Git\\Vsxmd\\Vsxmd\\bin\\Debug\\net8.0\\Vsxmd.xml \"\" \"\" ",
       "workingDirectory": "."
     }
   }
